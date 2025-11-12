@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v9.0": {
       "Dima.Api/1.0.0": {
         "dependencies": {
+          "Dima.Core": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "9.0.10",
           "Swashbuckle.AspNetCore": "9.0.6"
         },
@@ -72,6 +73,14 @@
             "fileVersion": "9.0.6.1840"
           }
         }
+      },
+      "Dima.Core/1.0.0": {
+        "runtime": {
+          "Dima.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -129,6 +138,11 @@
       "sha512": "sha512-WGsw/Yop9b16miq8TQd4THxuEgkP5cH3+DX93BrX9m0OdPcKNtg2nNm77WQSAsA+Se+M0bTiu8bUyrruRSeS5g==",
       "path": "swashbuckle.aspnetcore.swaggerui/9.0.6",
       "hashPath": "swashbuckle.aspnetcore.swaggerui.9.0.6.nupkg.sha512"
+    },
+    "Dima.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

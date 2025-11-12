@@ -1,6 +1,19 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Dima.Api.Data;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var cnnStr = builder
+    .Configuration
+    .GetConnectionString("DefaultConnection") ?? string.Empty;
+
+builder.Services.AddDbContext<AppDbContext>(
+    options =>
+    {
+        options.UseSqlServer(cnnStr);
+    });
+
 
 builder.Services.AddEndpointsApiExplorer();
 

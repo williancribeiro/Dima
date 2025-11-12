@@ -11,6 +11,8 @@ C:\Projetos\Dima\Dima.Api\bin\Debug\net9.0\Microsoft.OpenApi.dll
 C:\Projetos\Dima\Dima.Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Projetos\Dima\Dima.Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Projetos\Dima\Dima.Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Projetos\Dima\Dima.Api\bin\Debug\net9.0\Dima.Core.dll
+C:\Projetos\Dima\Dima.Api\bin\Debug\net9.0\Dima.Core.pdb
 C:\Projetos\Dima\Dima.Api\obj\Debug\net9.0\Dima.Api.csproj.AssemblyReference.cache
 C:\Projetos\Dima\Dima.Api\obj\Debug\net9.0\rpswa.dswa.cache.json
 C:\Projetos\Dima\Dima.Api\obj\Debug\net9.0\Dima.Api.GeneratedMSBuildEditorConfig.editorconfig
@@ -19,6 +21,7 @@ C:\Projetos\Dima\Dima.Api\obj\Debug\net9.0\Dima.Api.AssemblyInfo.cs
 C:\Projetos\Dima\Dima.Api\obj\Debug\net9.0\Dima.Api.csproj.CoreCompileInputs.cache
 C:\Projetos\Dima\Dima.Api\obj\Debug\net9.0\Dima.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Projetos\Dima\Dima.Api\obj\Debug\net9.0\Dima.Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Projetos\Dima\Dima.Api\obj\Debug\net9.0\Dima.Api.sourcelink.json
 C:\Projetos\Dima\Dima.Api\obj\Debug\net9.0\rjimswa.dswa.cache.json
 C:\Projetos\Dima\Dima.Api\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 C:\Projetos\Dima\Dima.Api\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
