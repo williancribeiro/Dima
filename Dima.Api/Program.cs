@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Dima.Api.Data;
+using Dima.Core.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,11 +31,11 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 app.MapPost(
-    "/v1/transactions",
-    (Request request, [FromServices] Handler handler) 
+    "/v1/categories",
+    (Request request, Handler handler) 
     => handler.Handle(request))
-    .WithName("Transaction: Create")
-    .WithSummary("Create a new transaction")
+    .WithName("Categories: Create")
+    .WithSummary("Criar uma nova categoria")
     .Produces<Response>();
 
 app.Run();
@@ -43,11 +44,7 @@ app.Run();
 public class Request
 {
     public string Title { get; set; } = string.Empty;
-    public DateTime CreatedAt { get; set; } = DateTime.Now;
-    public int Type { get; set; }
-    public decimal Amount { get; set; }
-    public long CategoryId { get; set; }
-    public string UserID { get; set; } = string.Empty;
+    public string Description { get; set; } = string.Empty;
 }
 
 // Response
@@ -55,23 +52,26 @@ public class Response
 {
     public long Id { get; set; }
     public string Title { get; set; } = string.Empty;
-    public DateTime CreatedAt { get; set; } = DateTime.Now;
-    public DateTime? PaidOrReceivedAt { get; set; }
-    public int Type { get; set; }
-    public decimal Amount { get; set; }
-    public long CategoryId { get; set; }
-    public string UserID { get; set; } = string.Empty;
 }
 
 //Handler
-public class Handler
+public class Handler(AppDbContext Context)
 {
     public Response Handle(Request request)
     {
+        var Category = new Category
+        {
+            Title = request.Title,
+            Description = request.Description
+        };
+
+        Context.Categories.Add(Category);
+        Context.SaveChanges();
+
         return new Response
         {
-            Id = 4,
-            Title = request.Title
+            Id = Category.Id,
+            Title = Category.Title
         };
     }
-}
+} 
